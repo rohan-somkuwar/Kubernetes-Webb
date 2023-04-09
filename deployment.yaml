@@ -1,25 +1,24 @@
 apiVersion:  apps/v1
 kind: Deployment
 metadata:
-  name: node-todo-deployment
+  name: web-app-deployment
   labels:
-    app: node-app
-  namespace: node-todo-app
+    app: web-app
+  namespace: my-web-app
 
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
-      app: node-app
+      app: web-app
   template:
     metadata:
       labels:
-        app: node-app
+        app: web-app
     spec:
       containers:
-      - name: node-todo-ctr
-        image: 9145503154/node-todo-test:latest
+      - name: my-web-ctr
+        image: 9145503154/my-app:latest
         ports:
         - containerPort: 8000
-   
 
