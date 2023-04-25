@@ -40,3 +40,25 @@ Pods are the Smallest unit of Kubernetes that represent one or more containers.
 # Kubernetes Installation and Configuration
 Kubeadm and Minikube are both tools that facilitate the deployment and management of Kubernetes Clusters but they are different purposes.
 
+# What you'll need
+2 CPUs or more
+
+2GB of free memory
+
+20GB of free disk space
+
+Internet connection
+
+*Kubeadm is used to create and manage production-ready Kubernetes clusters on cloud providers or bare-metal servers.
+
+* Minikube is used for the local development and testing of Kubernetes applications.
+
+Kubeadm Installation: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+This Step is Installing in the Linux operating system.
+
+Update the apt package index and install packages needed to use the Kubernetes apt repository:
+
+
+  sudo apt-get update
+  sudo apt-get install -y apt-transport-https ca-certificates curl
