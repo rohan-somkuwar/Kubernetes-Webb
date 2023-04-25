@@ -60,5 +60,5 @@ This Step is Installing in the Linux operating system.
 Update the apt package index and install packages needed to use the Kubernetes apt repository:
 
 
-  sudo apt-get update
-  sudo apt-get install -y apt-transport-https ca-certificates curl
+    sudo apt-get update
+    sudo apt-get install -y apt-transport-https ca-certificates curl
