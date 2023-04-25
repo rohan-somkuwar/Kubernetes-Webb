@@ -67,5 +67,23 @@ Update the apt package index and install packages needed to use the Kubernetes a
 Download the Google Cloud public signing key:
     
     sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
-Add the Kubern
-        
+
+
+Add the Kubernetes apt repository:
+
+    echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+
+Update apt package index, install kubelet, kubeadm and kubectl, and pin their version:
+    sudo apt-get update
+    sudo apt-get install -y kubelet kubeadm kubectl
+    sudo apt-mark hold kubelet kubeadm kubectl
+
+Minikube Installation: https://minikube.sigs.k8s.io/docs/start/
+
+To install the latest minikube stable release on x86-64 Linux using binary download
+
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+    minikube start
