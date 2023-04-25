@@ -37,6 +37,6 @@ It is responsible for handling network traffic in the Kubernetes cluster. It set
 # Pod
 Pods are the Smallest unit of Kubernetes that represent one or more containers.
 
-* Kubernetes Installation and Configuration
+# Kubernetes Installation and Configuration
 Kubeadm and Minikube are both tools that facilitate the deployment and management of Kubernetes Clusters but they are different purposes.
 
